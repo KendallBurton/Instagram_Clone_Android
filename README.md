@@ -27,9 +27,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/KendallBurton/Instagram_Clone_Android/blob/master/Part%20One.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/KendallBurton/Instagram_Clone_Android/blob/master/Part%20One%20rev1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](https://cloudconvert.com/mov-to-gif).
+GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
 ## Notes
 
