@@ -21,8 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.instagram_clone_android.Fragments.Compose;
 import com.google.android.material.navigation.NavigationBarView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -87,12 +86,13 @@ public class MainActivity extends AppCompatActivity {
     bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
+            Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.action_home:
                     Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.action_compose:
+                    fragment = new Compose();
                     Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.action_profile:
@@ -100,10 +100,12 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
             }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commitNow();
+
             return true;
         } // end NAV item select
     }); // end bottom nav view
-        
   //      queryPosts();
     } //     END onCreate
 
@@ -193,4 +195,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 } // END MainActivity
+
