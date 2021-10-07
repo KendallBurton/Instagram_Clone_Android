@@ -7,5 +7,9 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
     }
 }
+
+
+
 rootProject.name = "Instagram_Clone_Android"
 include ':app'
+
