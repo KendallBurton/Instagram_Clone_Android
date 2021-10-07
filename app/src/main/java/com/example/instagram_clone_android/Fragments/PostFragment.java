@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -12,12 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.instagram_clone_android.Adapters.PostsAdapter;
 import com.example.instagram_clone_android.Post;
 import com.example.instagram_clone_android.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,6 +32,8 @@ public class PostFragment extends Fragment {
 
     private RecyclerView rvPosts;
     public static final String TAG = "PostFragment";
+    private PostsAdapter adapter;
+    private List<Post> allPosts;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,13 +46,17 @@ public class PostFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         rvPosts = view.findViewById(R.id.rvPosts);
+        allPosts = new ArrayList<>();
+        adapter = new PostsAdapter(getContext(), allPosts);
 
         // Steps to use the recycler view
         // 0. Create layout for one row in the list
         // 1. create adapter
         // 2. create the data source
         // 3. set the adapter on the recycler view
+        rvPosts.setAdapter(adapter);
         // 4. set the layout manager  on the recycler view
+        rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
     }
 
@@ -64,6 +73,8 @@ public class PostFragment extends Fragment {
                 for (Post post : posts) {
                     Log.i(TAG, "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
                 }
+                allPosts.addAll(posts);
+                adapter.notifyDataSetChanged();
             }
         });
     }

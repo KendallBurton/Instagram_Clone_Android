@@ -55,14 +55,11 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.action_home:
                     fragment = new PostFragment();
-                    Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.action_compose:
                     fragment = new Compose();
-                    Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.action_profile:
-                    Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
                 default:
                     break;
             }
