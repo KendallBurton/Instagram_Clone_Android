@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.instagram_clone_android.Fragments.Compose;
 import com.example.instagram_clone_android.Fragments.PostFragment;
+import com.example.instagram_clone_android.Fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationBarView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Compose();
                     break;
                 case R.id.action_profile:
+                    fragment = new ProfileFragment();
                 default:
                     break;
             }
