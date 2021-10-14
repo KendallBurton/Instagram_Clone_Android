@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.instagram_clone_android.Fragments.Compose;
+import com.example.instagram_clone_android.Fragments.LogoutFragment;
 import com.example.instagram_clone_android.Fragments.PostFragment;
 import com.example.instagram_clone_android.Fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationBarView;
@@ -60,9 +61,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_compose:
                     fragment = new Compose();
                     break;
+                case R.id.action_logout:
+                    fragment = new LogoutFragment();
+                    break;
+                default:
                 case R.id.action_profile:
                     fragment = new ProfileFragment();
-                default:
                     break;
             }
 
