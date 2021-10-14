@@ -2,11 +2,15 @@
 
 **Instagram_Clone_Android** is a photo sharing app similar to Instagram but using Parse as its backend.
 
-Time spent: **8** hours spent in total
+Time spent: **14** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
+
+- [x] User can view the last 20 posts submitted to "Instagram".
+- [x] The user should switch between different tabs - viewing all posts (feed view), compose (capture photos form camera) and profile tabs (posts made) using fragments and a Bottom Navigation View. (2 points)
+- [x] User can pull to refresh the last 20 posts submitted to "Instagram".
 
 - [x] User can sign up to create a new account using Parse authentication.
 - [x] User can log in and log out of his or her account.
@@ -29,11 +33,15 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/KendallBurton/Instagram_Clone_Android/blob/master/Part%20One%20rev1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Here's a walkthrough of part two of implemented user stories:
+
+<img src='https://github.com/KendallBurton/Instagram_Clone_Android/blob/master/Part%20Two.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
 ## Notes
 
-One issue I ran into was enabiling the parse sdk. Parse lays the foundation of this project and is very important to get running and learn about.
+One issue I ran into was enabiling the parse sdk. Parse lays the foundation of this project and is very important to get running and learn about. Another Issue I ran into for part two was adding my own custom images to make the interface look for friendly. Now since the backend assignment is finished I will tidy up the front end for the user.
 
 ## Open-source libraries used
 
